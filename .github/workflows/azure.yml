@@ -19,12 +19,12 @@ on:
     - release/*
 
 env:
-  AZURE_WEBAPP_NAME: sampleEnvironment # set this to your application's name
+  AZURE_WEBAPP_NAME: sampleEnvironment    # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
   NODE_VERSION: '10.x'                # set this to the node version to use
 
 jobs:
-  build-and-deploy: 
+  build-and-deploy:
     name: Build and Deploy
     runs-on: ubuntu-latest
     steps:
@@ -38,7 +38,6 @@ jobs:
         # Build and test the project, then
         # deploy to Azure Web App.
         npm install
-      
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v2
       with:
